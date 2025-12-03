@@ -203,8 +203,8 @@ h1 {
         0 0 30px #1f0d19;
 }
 
-.github__link a:active {
-    color: #00c8ff;
+.github__link1 a:active {
+    color: #6904ff;
 }
 
 
@@ -386,6 +386,10 @@ tbody tr:nth-last-of-type(odd) {
 
 .pied__liens {
     flex: 1 0 170px;
+}
+
+.github__link2 a:active {
+    color: #00c8ff;
 }
 
 .pied__description {
