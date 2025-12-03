@@ -1,0 +1,426 @@
+/* /////////////////////////////////////// style.css */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #4d213b;
+    scroll-behavior: smooth;
+    font-family: "Eagle Lake", serif;  /* police de caractère importée */
+    text-shadow:
+        0 0 5px #000000,
+        0 0 7px #6904ff,
+        0 0 10px #1b0441,
+        0 0 30px #1f0d19;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.centre {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: radial-gradient(circle, rgba(181, 130, 160, 0.5) 0%, rgba(77, 33, 59, 0.5) 100%); /* gradient au centre */
+    border: 6px solid #1f0d19; /* une bordure spéciale */
+    border-style: groove;
+    z-index: 0; /* index de base sinon l'image de l'accueil disparaît */
+}
+
+section {
+    min-height: 100vh;
+    font-size: 420%;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px;
+    font-size: 100%;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    text-align: center;
+}
+
+
+/* /////////////////////////////////////// Section ENTÊTE */
+.entete__div {
+    display: flex;
+    align-items: center;
+    background-color: rgb(32 13 25);
+    padding: 20px;
+    min-width: 1090px;
+    height: 150px;
+}
+
+.entete__h1 { 
+    letter-spacing: 2px;
+    color: #290634;
+    padding: 50px;
+    text-shadow: 0px 4px 5px #000000, 2px 0px 0px #d56eff, 4px -2px 2px #000000;
+}
+
+.recherche { /* la boîte de la barre de RECHERCHE */
+    background-color: #170e14;
+    border: 2px solid #440054;
+    box-shadow: 0px 9px 5px rgb(0 0 0 / 50%);
+    width: 400px;
+    height: 40px;
+    padding: 5px 15px;
+    margin: 0 0 0 68px;
+    border-radius: 25px; /* forme plus arrondie */
+    display: flex;
+    align-items: center;
+}
+
+.recherche__input { /* dans la barre de recherche */
+    background-color: transparent;
+    flex: 1; /* pour la loupe */
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: #a786df; /* couleur de la barre et de son texte */
+}
+
+.recherche__input::placeholder {
+    color: #a786df; /* couleur du texte Rechercher */
+}
+
+.recherche input:focus { /* un rectangle de couleur claire qui apparaît lorsqu'on click sur la barre de recherche */
+    border: none;
+    outline: none;
+}
+
+.recherche__img { /* la loupe */
+    width: 22px;
+    height: 22px;
+    cursor: pointer; 
+}
+
+
+
+.navigation {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+}
+
+.navigation__bouton img {
+    transition: transform 0.2s ease; /* transition pour le léger agrandissement (lorsqu'on hover) */
+}
+
+.navigation__bouton img:hover {
+    transform: scale(1.2); /* léger agrandissement */
+}
+
+#chk-burger:checked~.navigation__menu { /* quand on click sur la case burger, le MENU s'affiche */
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0); /* glisse vers la gauche */
+
+    display: flex;
+    flex-direction: column;
+}
+
+#chk-burger {
+  opacity: 0; /* petit carré à cocher caché */
+}
+
+.navigation__menu {
+    visibility: hidden; /* élément non interactif jusqu'à qu'on active #chk-burger */
+    opacity: 0;
+    transform: translateX(40px); /* décalé vers la droite */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* transition pour l'opacité et le léger déplacement (lorsque c'est activé) */
+    
+    gap: 10px; /* espace entre les boutons */
+}
+
+.navigation__menu a {
+    display: inline-block;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(98, 7, 16);
+    padding: 6px 11px 6px 9px;
+    border-radius: 12px;
+}
+
+.navigation__menu a:hover {
+    background-color: #7d0a0e;
+    transform: scale(1.07); /* léger agrandissement */
+}
+
+.navigation__menu a:active {
+    background-color: #9f0c11;
+}
+
+
+
+
+/* /////////////////////////////////////// Section ACCUEIL */
+.hero {
+    position: relative; /* cela positionne le background-image de ::before dans la boîte */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/mazamorra-morada_800x534.png");
+    opacity: 0.6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    clip-path:
+    polygon(50% 2%, 180% -26%, 129% 48%, 90% 80%, 81% 92%, 70% 98%, 18% 183%, -41% 38%, 211% -107%, 50% 2%);
+    z-index: -1; /* image derrière le texte */
+}
+
+.hero__contenu ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.hero__contenu li {
+    min-width: 1100px;
+    margin: 7px auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 33px;
+    line-height: 92px;
+    text-shadow:
+        0 0 20px #ffffff,
+        0 0 30px #1f0d19;
+}
+
+.github__link a:active {
+    color: #00c8ff;
+}
+
+
+
+/* /////////////////////////////////////// Section INSCRIPTION */
+
+.formulaire__div { /* conteneur général du formulaire */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 600px;
+    margin: 42px auto;
+    padding: 30px;
+
+    background: rgba(22, 12, 40, 0.911);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    box-shadow: 0 8px 17px rgba(19, 1, 25, 0.45);
+}
+
+
+.formulaire fieldset { /* fieldsets */
+    width: 100%;
+    margin: 20px 0;
+    padding: 15px 20px;
+
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+fieldset legend,
+fieldset label {
+    color: #231631;
+    font-size: 32px;
+    text-shadow: 
+        0 0 3px #f0c1ff,   
+        0 0 5px #8100da,  
+        0 0 10px #3d053d,  
+        0 0 20px #956496,  
+        0 0 40px #4400ff;  
+}
+
+
+.formulaire__texte { /* barre de texte */
+    width: 100%;
+    padding: 12px 15px;
+
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.3);
+
+    background: rgba(255,255,255,0.9);
+    color: #2c2c2c;
+
+    transition: 0.3s ease-in-out; /* temps que cela prend pour transitionner au :focus */
+}
+
+.formulaire__texte:focus { /* le border est coloré quand tu écris */
+    outline: none;
+    border-color: #8a5cff;
+    box-shadow: 0 0 8px #825cffaa;
+}
+
+
+input[type="submit"] { /* bouton Valider */
+    padding: 12px 25px;
+    margin-top: 20px;
+
+    background: linear-gradient(0deg, #080607, #2e0043);
+    border: none;
+    border-radius: 10px;
+    color: white;
+
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover
+ {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+
+
+/* /////////////////////////////////////// Section TABLEAU */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    margin: 42px auto;
+    box-shadow: 0 8px 17px rgba(19, 1, 25, 0.45);
+    background-color: rgb(26, 17, 38);
+}
+
+tr {
+    font-style: italic;
+    font-family: "Tapestry", serif; /* police de caractère importée */
+}
+
+td, th {
+    border: 3px groove #130e13;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+thead tr:nth-of-type(1) { /* la première rangée avec les sujets */
+    background-color: #130e13;
+}
+
+thead th { /* texte des sujets de la première rangée */
+    color: #a786df;
+}
+
+tbody tr:nth-last-of-type(odd) {
+    background-color: rgb(43, 14, 28);
+}
+
+
+.div__source li { /* source web de la recette */
+    text-align: center;
+    list-style-type: none;
+}
+
+.source-recette__link a:active {
+    color: #ffcc00;
+}
+
+
+
+
+
+
+/* /////////////////////////////////////// Section PIED DE PAGE */
+
+.pied__div {
+    display: flex;
+    flex-flow: wrap;
+    gap: 10px;
+    padding: 40px 30px 40px 20px;
+    background-color: rgb(32 13 25);
+}
+
+.pied__div section { 
+    min-height: 0vh; /* configuration exceptionnelle pour préserver la HAUTEUR pour le pied de page et ses sections en flex */
+}
+
+.pied__div h3 {
+    font-family: "Great Vibes", cursive;
+    font-size: 22px;
+}
+
+.pied__div p,
+.pied__div ul,
+.pied__confidentialite {
+    font-family: "Tapestry", serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.pied__dessert {
+    flex: 0 0 190px;
+}
+
+.pied__adresse li,
+.pied__liens li {
+    list-style-type: none;
+    margin-left: -40px;
+}
+
+.pied__adresse {
+    flex: 0 0 200px;
+}
+
+.pied__liens {
+    flex: 1 0 170px;
+}
+
+.pied__description {
+    flex: 1 0 330px;
+}
+
+.pied__description p {
+    color: #a23b88;
+}
+
+.pied__sociaux { /* position des icons en bas */
+    flex: 1 0 0px;
+}
+
+.pied__sociaux img { /* espace entre les icons en bas */
+    margin: 0px 6px;
+    cursor: pointer;
+}
+
+.pied__confidentialite {
+    display: flex;
+    align-items: center;
+}
+
+.pied__maison a {
+    text-decoration: none;
+}
+
+.pied__maison {
+    display: flex;
+}
+
+.ms-icon { /* icône de maison */
+  font-family: "Material Symbols Outlined";
+  font-size: 42px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}

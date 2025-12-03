@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/mazamorra-glass.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandre Rémy - TP2</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=home" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- ///////////////////////////////////////////////////////// Section ENTÊTE -->
+    <header class="centre entete" id="zero">
+        <div class="entete__div">
+            <img src="images/ALEXANDREMY_glow.png" width="150" height="150" alt="logo avec nom">
+            <!-- div de mon logo -->
+            <h1 class="entete__h1">La recette du pudding de maïs mauve</h1>
+            <form class="recherche"> <!-- barre de recherche -->
+                <input class="recherche__input" placeholder="Rechercher" type="search" />
+                <img class="recherche__img" src="https://s2.svgbox.net/hero-outline.svg?ic=search&color=405"
+                    alt="recherche" />
+            </form>
+            <div class="navigation"> <!-- navigation -->
+                <label class="navigation__bouton" for="chk-burger"> <!-- bouton burger qui active le menu -->
+                    <img src="https://s2.svgbox.net/hero-solid.svg?ic=menu&color=959" width="32" height="32">
+                </label>
+                <input type="checkbox" id="chk-burger">
+                <nav class="navigation__menu"> <!-- menu -->
+                    <a class="menu__a" href="#zero">ACCUEIL</a>
+                    <a class="menu__a" href="#un">INSCRIPTION</a>
+                    <a class="menu__a" href="#deux">TABLEAU</a>
+                    <a class="menu__a" href="#trois">ARTICLE</a>
+                    <a class="menu__a" href="#quatre">VIDÉO/SON</a>
+                    <a class="menu__a" href="#cinq">GALERIE</a>
+                    <a class="menu__a" href="#six">CONTACT</a>
+                </nav>
+            </div>
+        </div>
+    </header> <!-- Fin .entete -->
+
+    <!-- ///////////////////////////////////////////////////////// Section ACCUEIL -->
+    <div class="centre hero" id="zero">
+
+        <section class="hero__contenu">
+
+            <h1>BIENVENUE</h1>
+
+            <ul class="hero__profil"> <!-- profil de l'accueil -->
+
+                <li>TP2</li>
+                <li><i>La Mazamorra Morada</i></li>
+                <li>Auteur : Alexandre Rémy</li>
+                <li>Cours : </span><span>582-1W1-MA - Mise en page Web</li>
+                <li>Programme d'études : Techniques d'intégration multimédia</li>
+                <li>Collège de Maisonneuve</li>
+                <!-- adresse de la Github-page -->
+                <li class="github__link">GitHub-page : <a href="https://github.com/iAlexandRem"
+                        target="_blank">https://github.com/iAlexandRem</a></li>
+                <li>Automne 2025</li>
+
+            </ul>
+
+        </section>
+    </div>
+
+    <!-- ///////////////////////////////////////////////////////// Section INSCRIPTION -->
+    <div>
+        <section class="un centre" id="un"> <!-- mon formulaire pour s'inscrire -->
+            <h1>VOTRE COMPTE</h1>
+            <form class="formulaire" id="formulaire"
+                onsubmit="event.preventDefault(); this.reset(); document.getElementById('un').scrollIntoView({behavior:'smooth'});">
+                <!-- Bouton Valider : En cliquant, le bouton reset le form et retourne au-dessus vers id="un" INSCRIPTION -->
+                <div class="formulaire__div">
+                    <fieldset>
+                        <label class="formulaire__label" for="texte-nom">Nom</label>
+                        <input class="formulaire__texte" id="texte-nom" type="text" placeholder="Entrez votre Nom">
+
+                    </fieldset>
+                    <fieldset>
+                        <label class="formulaire__label" for="texte-prenom">Prénom</label>
+                        <input class="formulaire__texte" id="texte-prenom" type="text"
+                            placeholder="Entrez votre Prénom">
+
+                    </fieldset>
+                    <fieldset>
+                        <label class="formulaire__label" for="texte-courriel">Courriel</label>
+                        <input class="formulaire__texte" id="texte-courriel" type="email"
+                            placeholder="Entrez votre courriel">
+
+                    </fieldset>
+                    <fieldset>
+                        <label class="formulaire__label" for="texte-mdp">Mot de passe</label>
+                        <input class="formulaire__texte" id="texte-mdp" type="password"
+                            placeholder="Entrez votre mot de passe">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Abonnement</legend>
+                        <label>Ordinaire<input type="radio" name="rad-abonnement"></label>
+                        <label>Plus<input type="radio" name="rad-abonnement"></label>
+                        <label>Suprême<input type="radio" name="rad-abonnement"></label>
+                    </fieldset>
+                    <input type="submit" value="Devenir Membre">
+
+            </form>
+    </div>
+
+    </section>
+    </div>
+
+
+    <!-- ///////////////////////////////////////////////////////// Section TABLEAU -->
+    <div class="div__source">
+        <section class="deux centre" id="deux">
+            <h1>INGRÉDIENTS</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aliment</th>
+                        <th>Portion estimée</th>
+                        <th>Énergie</th>
+                        <th>Glucides totaux</th>
+                        <th>Sucres simples</th>
+                        <th>Fibres</th>
+                        <th>Protéines</th>
+                        <th>Lipides totaux</th>
+                        <th>Notes/Indice glycémique (IG)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Maïs violet</td>
+                        <td>1000 g (grain sec)</td>
+                        <td>3600 kcal</td>
+                        <td>750 g</td>
+                        <td>30 g</td>
+                        <td>95 g</td>
+                        <td>94 g</td>
+                        <td>40 g</td>
+                        <td>IG Moyen (55) - **Riche en anthocyanes**</td>
+                    </tr>
+                    <tr>
+                        <td>Sucre</td>
+                        <td>500 g</td>
+                        <td>1940 kcal</td>
+                        <td>500 g</td>
+                        <td>500 g</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>IG Élevé (100) - **Très riche en sucres simples**</td>
+                    </tr>
+                    <tr>
+                        <td>Pelure d’un demi-ananas</td>
+                        <td>≈ 50 g</td>
+                        <td>5 kcal</td>
+                        <td>1 g</td>
+                        <td>0</td>
+                        <td>0.5 g</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>IG Bas (35) - **Arômes et polyphénols**</td>
+                    </tr>
+                    <tr>
+                        <td>Jus d’un citron (1 citron)</td>
+                        <td>50 ml</td>
+                        <td>12 kcal</td>
+                        <td>4 g</td>
+                        <td>1.5 g</td>
+                        <td>0</td>
+                        <td>0.2 g</td>
+                        <td>0</td>
+                        <td>IG Bas (20) - **Riche en vitamine C**</td>
+                    </tr>
+                    <tr>
+                        <td>Farine de patate douce</td>
+                        <td>150 g</td>
+                        <td>540 kcal</td>
+                        <td>126 g</td>
+                        <td>28 g</td>
+                        <td>9 g</td>
+                        <td>4.5 g</td>
+                        <td>0.6 g</td>
+                        <td>IG Moyen (60) - **Épaississant naturel**</td>
+                    </tr>
+                    <tr>
+                        <td>Pommes Delicious</td>
+                        <td>360 g (≈ 2 pommes)</td>
+                        <td>190 kcal</td>
+                        <td>50 g</td>
+                        <td>42 g</td>
+                        <td>8 g</td>
+                        <td>0.6 g</td>
+                        <td>0.6 g</td>
+                        <td>IG Bas (38) - **Riche en fibres**</td>
+                    </tr>
+                    <tr>
+                        <td>Coing</td>
+                        <td>250 g (≈ 1 coing)</td>
+                        <td>60 kcal</td>
+                        <td>15 g</td>
+                        <td>12 g</td>
+                        <td>2 g</td>
+                        <td>0.4 g</td>
+                        <td>0.2 g</td>
+                        <td>IG Bas (35) - **Pauvre en calories**</td>
+                    </tr>
+                    <tr>
+                        <td>Écorce d’une demi-orange</td>
+                        <td>≈ 20 g</td>
+                        <td>5 kcal</td>
+                        <td>1 g</td>
+                        <td>0</td>
+                        <td>0.5 g</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>IG Bas (15) - **Apporte des huiles essentielles**</td>
+                    </tr>
+                    <tr>
+                        <td>Clous de girofle</td>
+                        <td>2 g (1 c. à café)</td>
+                        <td>6 kcal</td>
+                        <td>1 g</td>
+                        <td>0</td>
+                        <td>0.7 g</td>
+                        <td>0.2 g</td>
+                        <td>0.3 g</td>
+                        <td>IG Bas (5) - **Très antioxydant**</td>
+                    </tr>
+                    <tr>
+                        <td>Cannelle en bâtons</td>
+                        <td>4 g</td>
+                        <td>10 kcal</td>
+                        <td>3 g</td>
+                        <td>0</td>
+                        <td>2 g</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>IG Bas (5) - **Polyphénols**</td>
+                    </tr>
+                    <tr>
+                        <td>Eau d’ananas</td>
+                        <td>2,5 L</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>IG nul (0) - **Liquide d’infusion**</td>
+                    </tr>
+                    <tr>
+                        <td>Pulpe d’ananas</td>
+                        <td>165 g (1 tasse)</td>
+                        <td>83 kcal</td>
+                        <td>22 g</td>
+                        <td>16 g</td>
+                        <td>2.3 g</td>
+                        <td>0.9 g</td>
+                        <td>0.2 g</td>
+                        <td>IG Moyen (59) - **Bromélaïne**</td>
+                    </tr>
+                    <tr>
+                        <td>Pêches</td>
+                        <td>300 g (≈ 2 pêches)</td>
+                        <td>150 kcal</td>
+                        <td>36 g</td>
+                        <td>30 g</td>
+                        <td>4 g</td>
+                        <td>2 g</td>
+                        <td>0.6 g</td>
+                        <td>IG Bas (42) - **Riche en fibres**</td>
+                    </tr>
+                    <tr>
+                        <td>Fruits secs</td>
+                        <td>500 g (mélange)</td>
+                        <td>1300 kcal</td>
+                        <td>300 g</td>
+                        <td>240 g</td>
+                        <td>40 g</td>
+                        <td>11 g</td>
+                        <td>3 g</td>
+                        <td>IG Bas (33) - **Riche en fibres et sucres naturels**</td>
+                    </tr>
+                    <tr>
+                        <td>Cannelle moulue</td>
+                        <td>16 g (2 c. à soupe)</td>
+                        <td>40 kcal</td>
+                        <td>13 g</td>
+                        <td>0</td>
+                        <td>8 g</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>IG Bas (5) - **Polyphénols**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <li class="source-recette__link">Source : <a
+                href="https://elcomercio.pe/mag/recetas/receta-de-mazamorra-morada-2002-noticia/"
+                target="_blank">"Diario El Comercio Perú. Todos los derechos reservados."</a></li>
+        <!-- source web de la recette -->
+    </div>
+
+    <!-- ///////////////////////////////////////////////////////// Section ARTICLE -->
+    <div>
+        <section class="trois centre" id="trois">
+            <h1>RECETTE</h1>
+        </section>
+    </div>
+
+    <!-- ///////////////////////////////////////////////////////// Section VIDÉO/SON -->
+    <div>
+        <section class="quatre centre" id="quatre">
+            <h1>TUTORIELS VIDÉO</h1>
+        </section>
+    </div>
+
+    <!-- ///////////////////////////////////////////////////////// Section GALERIE D'IMAGES -->
+    <div>
+        <section class="cinq centre" id="cinq">
+            <h1>IMAGES</h1>
+        </section>
+    </div>
+
+
+    <!-- ///////////////////////////////////////////////////////// Section PIED DE PAGE -->
+    <div>
+        <footer class="footer centre" id="six">
+            <div class="pied__div">
+                <section class="pied__dessert">
+                    <img src="images/mazamorra-glass.png" width="150" height="150" alt="petit dessert d'au revoir">
+                </section>
+
+                <section class="pied__adresse">
+                    <h3>Adresse du Collège</h3>
+                    <ul>
+                        <li><big>Collège de Maisonneuve</big></li>
+                        <li>3800, rue Sherbrooke Est</li>
+                        <li>Montréal, QC</li>
+                        <li>H1X 2A2</li>
+                    </ul>
+                </section>
+                <section class="pied__liens">
+                    <h3>Liens importants</h3>
+                    <ul>
+                        <li class="github__link">Ma <big>GitHub</big>-page : <a href="https://github.com/iAlexandRem"
+                                target="_blank">https://github.com/iAlexandRem</a></li>
+                        <li class="source-recette__link"><big>Source</big> de la recette : <a
+                                href="https://elcomercio.pe/mag/recetas/receta-de-mazamorra-morada-2002-noticia/"
+                                target="_blank">Receta de mazamorra morada</a></li>
+                    </ul>
+                </section>
+                <section class="pied__description">
+                    <h3>Description du sujet</h3>
+                    <p>
+                        La <i>mazamorra morada</i> est un dessert traditionnel péruvien préparé à base de maïs violet,
+                        un ingrédient emblématique des Andes.
+                        Cuite lentement avec des fruits comme l’ananas et le coing, puis parfumée à la cannelle et au
+                        clou de girofle,
+                        cette préparation donne un pudding violet onctueux et légèrement gélifié. Symbole de l’héritage
+                        culinaire du Pérou,
+                        elle est souvent dégustée lors des fêtes aux côtés de la <i>chicha morada</i>, une boisson
+                        rafraîchissante également élaborée
+                        à partir de maïs violet.
+                    </p>
+                </section>
+                <figure class="pied__sociaux">
+                    <img src="https://s2.svgbox.net/social.svg?ic=github&color=9000da" width="25" height="25"
+                        alt="github"/>
+                    <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=6500da" width="25" height="25"
+                        alt="facebook"/>
+                    <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=9500da" width="25" height="25"
+                        alt="stackoverflow"/>
+                    <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=7000da" width="25" height="25"
+                        alt="linkedin"/>
+                    <img src="https://s2.svgbox.net/social.svg?ic=messenger&color=9000da" width="25" height="25"
+                        alt="messenger"/>
+                    <img src="https://s2.svgbox.net/social.svg?ic=discord&color=7500da" width="25" height="25"
+                        alt="discord"/>
+                </figure>
+
+                <section class="pied__confidentialite">
+                    <cite>Avis de confidentialité | Privacy Notice</cite>
+                </section>
+
+                <section class="pied__maison">
+                    <a class="ms-icon home" href="#zero">home</a> <!-- maison pour revenir à l'accueil -->
+                </section>
+
+            </div>
+
+        </footer>
+    </div>
+
+</body>
+
+</html>
