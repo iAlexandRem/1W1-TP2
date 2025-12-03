@@ -6,4 +6,4 @@ Auteur : Alexandre Rémy
 
 Cours : 1W1 - Mise en page Web
 
-Github-page : EN COURS DE CRÉATION
+Github-page : https://ialexandrem.github.io/1W1-TP2/
