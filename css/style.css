@@ -340,6 +340,80 @@ tbody tr:nth-last-of-type(odd) {
 
 
 
+/* /////////////////////////////////////// Section ARTICLE */
+
+
+.recette__div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    padding: 30px;
+}
+
+.recette__div:nth-child(odd) { /* les divs impairs : figure à gauche, article à droite */
+    flex-direction: row;
+}
+
+.recette__div:nth-child(even) { /* les divs pairs : figure à droite, article à gauche */
+    flex-direction: row-reverse;
+}
+
+.recette__article h3 { /* les titres des étapes de la recette */
+    font-family: "Great Vibes", cursive;
+    font-size: 42px;
+    font-weight: bold;
+    padding: 15px 0px;
+}
+
+.recette__article p { 
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+
+.recette__figure { 
+    position: relative;
+    flex: 0 0 300px; /* les images devraient être maintenant de la même taille */
+    box-shadow: 0 8px 17px rgba(19, 1, 25, 0.45);
+}
+
+.recette__figure img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.recette__figure img:nth-child(even) {
+    position: absolute; /* l'image originale prend la position de l'image filtre mauve placée au-dessus */
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.recette__figure img:nth-child(odd):hover { /* l'image filtre mauve disparaît */
+    opacity: 0;
+}
+
+.recette__figure img:nth-child(even):hover { /* l'image originale apparaît */
+    opacity: 1;
+}
+
+
+.recette__figure figcaption {
+    font-family: "Tapestry", serif;
+    font-size: 12px;
+    color: #e2b6d0;
+    background-color: #290634;
+    text-align: center;
+    padding: 7px;
+}
+
+
+
+
+
 
 
 
@@ -404,9 +478,13 @@ tbody tr:nth-last-of-type(odd) {
     flex: 1 0 0px;
 }
 
-.pied__sociaux img { /* espace entre les icons en bas */
+.pied__sociaux a { /* espace entre les icons en bas */
     margin: 0px 6px;
     cursor: pointer;
+}
+
+.pied__sociaux a:hover { 
+    filter: hue-rotate(90deg); /* violet à rouge; rouge à vert pour le Pérou */
 }
 
 .pied__confidentialite {
@@ -425,6 +503,11 @@ tbody tr:nth-last-of-type(odd) {
 .ms-icon { /* icône de maison */
   font-family: "Material Symbols Outlined";
   font-size: 42px;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
+}
+
+.ms-icon:hover { 
+  color: rgb(255, 255, 255);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }

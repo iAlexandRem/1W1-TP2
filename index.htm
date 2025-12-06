@@ -20,8 +20,7 @@
     <!-- ///////////////////////////////////////////////////////// Section ENTÊTE -->
     <header class="centre entete" id="zero">
         <div class="entete__div">
-            <img src="images/ALEXANDREMY_glow.png" width="150" height="150" alt="logo avec nom">
-            <!-- div de mon logo -->
+            <img src="images/ALEXANDREMY_glow.png" width="150" height="150" alt="logo avec nom"> <!-- div de mon logo -->
             <h1 class="entete__h1">La recette du pudding de maïs mauve</h1>
             <form class="recherche"> <!-- barre de recherche -->
                 <input class="recherche__input" placeholder="Rechercher" type="search" />
@@ -61,7 +60,7 @@
                 <li>Cours : </span><span>582-1W1-MA - Mise en page Web</li>
                 <li>Programme d'études : Techniques d'intégration multimédia</li>
                 <li>Collège de Maisonneuve</li>
-                <!-- adresse de la Github-page -->
+                <!-- adresse de ma Github-page -->
                 <li class="github__link1">GitHub-page : <a href="https://ialexandrem.github.io/1W1-TP2/"
                         target="_blank">https://ialexandrem.github.io/1W1-TP2/</a></li>
                 <li>Automne 2025</li>
@@ -76,8 +75,7 @@
         <section class="un centre" id="un"> <!-- mon formulaire pour s'inscrire -->
             <h1>VOTRE COMPTE</h1>
             <form class="formulaire" id="formulaire"
-                onsubmit="event.preventDefault(); this.reset(); document.getElementById('un').scrollIntoView({behavior:'smooth'});">
-                <!-- Bouton Valider : En cliquant, le bouton reset le form et retourne au-dessus vers id="un" INSCRIPTION -->
+                onsubmit="event.preventDefault(); this.reset(); document.getElementById('un').scrollIntoView({behavior:'smooth'});"> <!-- Bouton Valider : En cliquant, le bouton reset le form et retourne au-dessus vers id="un" INSCRIPTION -->
                 <div class="formulaire__div">
                     <fieldset>
                         <label class="formulaire__label" for="texte-nom">Nom</label>
@@ -123,7 +121,7 @@
 
             <table>
                 <thead>
-                    <tr>
+                    <tr> <!-- sections principales -->
                         <th>Aliment</th>
                         <th>Portion estimée</th>
                         <th>Énergie</th>
@@ -314,6 +312,60 @@
     <div>
         <section class="trois centre" id="trois">
             <h1>RECETTE</h1>
+
+            <div class="recette__div"> <!-- étape 1 de la recette -->
+            <article class="recette__article">
+            <h3>Cuisson du maïs</h3>
+            <p>Déposer le maïs mauve dans l’eau d’ananas et portez à ébullition. 
+                Lorsque l’eau bout, laisser tomber dans la casserole : la cannelle, les clous de girofle, l’écorce d’orange, le coing, les pommes et la pelure d’ananas. 
+                Laisser cuire jusqu’à ce que le liquide réduise de moitié.</p>
+            </article>
+            <figure class="recette__figure">
+                <img src="images/mais-canelle-et-fruits_filter.jpg" alt="bouillir l'eau avec le maïs puis le reste"> <!-- image filtre mauve (odd) -->
+                <img src="images/mais-canelle-et-fruits.jpg" alt="le filtre mauve de l'image s'en va"> <!-- image sans filtre (even) -->
+                <figcaption>Faire bouillir l’eau avec le maïs jusqu’à ce qu’il libère sa couleur et son parfum, puis ajouter les autres ingrédients aromatiques.</figcaption>
+            </figure>
+            </div>
+
+            <div class="recette__div"> <!-- étape 2 de la recette -->
+            <article class="recette__article">
+            <h3>Obtention de la chicha morada</h3>
+            <p>Filtrer immédiatement la préparation pour obtenir la chicha morada, cet élixir mauve. 
+                Réserver une tasse à part de ce liquide filtré et laissez-la refroidir afin de préparer le mélange épaississant.</p>
+            </article>
+            <figure class="recette__figure">
+                <img src="images/casserole-chicha-morada_filter.jpg" alt="la chicha est le liquide, qu'il faut garder en filtrant">
+                <img src="images/casserole-chicha-morada.jpg" alt="le filtre mauve de l'image s'en va">
+                <figcaption>Filtrer pour ne conserver que le liquide violet aromatique : la chicha morada.</figcaption>
+            </figure>
+            </div>
+
+            <div class="recette__div"> <!-- étape 3 de la recette -->
+            <article class="recette__article">
+            <h3>Épaississement</h3>
+            <p>Dans cette tasse de chicha refroidie, dissoudre la farine de patate douce à l’aide d’un fouet. Verser ensuite ce mélange dans la chicha encore chaude. 
+                Ajouter le sucre, les fruits restants et le jus de citron, puis faire cuire à feu moyen en remuant constamment avec une cuillère en bois pour éviter les grumeaux, jusqu’à ce que la préparation épaississe.</p>
+            </article>
+            <figure class="recette__figure">
+                <img src="images/arina-de-camote_filter.jpg" alt="on ajoute un mélange de chicha et de farine de patate douce">
+                <img src="images/arina-de-camote.jpg" alt="le filtre mauve de l'image s'en va">
+                <figcaption>Incorporer ce mélange de farine de patate douce dans la chicha morada remise au feu, en remuant constamment jusqu’à obtenir une consistance épaisse et homogène.</figcaption>
+            </figure>
+            </div>
+
+            <div class="recette__div"> <!-- étape 4 de la recette -->
+            <article class="recette__article">
+            <h3>Finition</h3>
+            <p>Poursuivre la cuisson encore quelques minutes après épaississement, puis retirer du feu. 
+                Servir la mazamorra morada tiède et saupoudrer de cannelle moulue avant de déguster.</p>
+            </article>
+            <figure class="recette__figure">
+                <img src="images/pudding-servi_filter.jpg" alt="le pudding est prêt tiède, rajouter de la canelle au besoin">
+                <img src="images/pudding-servi.jpg" alt="le filtre mauve de l'image s'en va">
+                <figcaption>Régalez-vous!</figcaption>
+            </figure>
+            </div>
+
         </section>
     </div>
 
@@ -336,11 +388,11 @@
     <div>
         <footer class="footer centre" id="six">
             <div class="pied__div">
-                <section class="pied__dessert">
+                <section class="pied__dessert"> <!-- section pour une image sans background du dessert, qui est aussi le favicon -->
                     <img src="images/mazamorra-glass.png" width="150" height="150" alt="petit dessert d'au revoir">
                 </section>
 
-                <section class="pied__adresse">
+                <section class="pied__adresse"> <!-- section adresse Maisonneuve -->
                     <h3>Adresse du Collège</h3>
                     <ul>
                         <li><big>Collège de Maisonneuve</big></li>
@@ -349,17 +401,20 @@
                         <li>H1X 2A2</li>
                     </ul>
                 </section>
-                <section class="pied__liens">
+                <section class="pied__liens"> <!-- section de liens Web -->
                     <h3>Liens importants</h3>
                     <ul>
                         <li class="github__link2">Mon compte <big>GitHub</big> : <a href="https://github.com/iAlexandRem"
                                 target="_blank">https://github.com/iAlexandRem</a></li>
-                        <li class="source-recette__link"><big>Source</big> de la recette : <a
+                        <li class="source-recette__link"><big>Sources</big> de la recette : <a
                                 href="https://elcomercio.pe/mag/recetas/receta-de-mazamorra-morada-2002-noticia/"
                                 target="_blank">Receta de mazamorra morada</a></li>
+                        <li class="source-recette__link"> <a
+                                href="https://buenazo.pe/recetas/dulces-y-postres/mazamorra-morada-receta-181#google_vignette"
+                                target="_blank">Mazamorra morada receta vídeo</a></li>
                     </ul>
                 </section>
-                <section class="pied__description">
+                <section class="pied__description"> <!-- section de faits divers sur mon dessert favori -->
                     <h3>Description du sujet</h3>
                     <p>
                         La <i>mazamorra morada</i> est un dessert traditionnel péruvien préparé à base de maïs violet,
@@ -373,19 +428,14 @@
                         à partir de maïs violet.
                     </p>
                 </section>
-                <figure class="pied__sociaux">
-                    <img src="https://s2.svgbox.net/social.svg?ic=github&color=9000da" width="25" height="25"
-                        alt="github" />
-                    <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=6500da" width="25" height="25"
-                        alt="facebook" />
-                    <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=9500da" width="25" height="25"
-                        alt="stackoverflow" />
-                    <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=7000da" width="25" height="25"
-                        alt="linkedin" />
-                    <img src="https://s2.svgbox.net/social.svg?ic=messenger&color=9000da" width="25" height="25"
-                        alt="messenger" />
-                    <img src="https://s2.svgbox.net/social.svg?ic=discord&color=7500da" width="25" height="25"
-                        alt="discord" />
+                <figure class="pied__sociaux"> <!-- section de liens pour accéder à quelques-uns de mes réseaux sociaux, et à une célèbre Vieille Montagne du Pérou depuis Google Earth -->
+                    <a href="https://github.com/iAlexandRem/1W1-TP2" target=_blank style="text-decoration:none"> <img class="svg" src="https://s2.svgbox.net/social.svg?ic=github&color=9000da" width="25" height="25" alt="github"> </a>
+                    <a href="https://www.behance.net/alexrem2042" target=_blank style="text-decoration:none"> <img class="svg" src="https://s2.svgbox.net/social.svg?ic=behance&color=6500da" width="25" height="25" alt="behance"> </a>
+                    <a href="https://www.youtube.com/@tridimensionnellement" target=_blank style="text-decoration:none"> <img class="svg" src="https://s2.svgbox.net/social.svg?ic=youtube&color=9500da" width="25" height="25" alt="youtube"> </a>
+                    <a href="https://www.linkedin.com/in/alexandre-rémy" target=_blank style="text-decoration:none"> <img class="svg" src="https://s2.svgbox.net/social.svg?ic=linkedin&color=7000da" width="25" height="25" alt="linkedin"> </a>
+
+                    <a href="https://earth.google.com/web/search/Machu+Picchu,+Peru/@-13.16303862,-72.5448442,2439.298922a,240.98994691d,35y,0h,60t,0r/data=CiwiJgokCfdMToMbRSfAEYjM5lIKKy7AGRyWqoi_aFHAIcmTlcW3E1PAQgIIASgCQgIIAEoNCP___________wEQAA?authuser=0" 
+                    target=_blank style="text-decoration:none"> <img class="svg" src="https://s2.svgbox.net/flags-hd.svg?ic=pe&color=1000da" width="25" height="25" alt="machu picchu"> </a>
                 </figure>
 
                 <section class="pied__confidentialite">
